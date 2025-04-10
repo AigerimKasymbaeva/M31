@@ -4,5 +4,6 @@ import java.io.Serializable
 
 data class Animal(
     val title: String,
-    val image: String
+    val image: String,
+    val desc: String
 ): Serializable

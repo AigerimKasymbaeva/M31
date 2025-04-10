@@ -30,6 +30,7 @@ class DetailFragment : Fragment() {
         arguments?.let { bundle ->
             val animal = bundle.getSerializable("animal") as Animal
             txtTitle.text = animal.title
+            txtDesc.text = animal.desc
             Glide.with(ivAnimal).load(animal.image).into(ivAnimal)
         }
     }

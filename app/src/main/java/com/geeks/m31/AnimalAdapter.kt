@@ -10,8 +10,9 @@ class AnimalAdapter(
     private val animalList: ArrayList<Animal>,
     private val onItemClick: (position: Int) -> Unit
 ) : RecyclerView.Adapter<AnimalAdapter.ViewHolder>() {
-    class ViewHolder(private val binding: ItemHomeBinding)
-        : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(
+        private val binding: ItemHomeBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(animal: Animal) {
             binding.txtTitle.text = animal.title
             Glide.with(binding.ivAnimal).load(animal.image).into(binding.ivAnimal)
